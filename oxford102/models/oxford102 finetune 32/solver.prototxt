@@ -1,0 +1,17 @@
+# Settings follow the example for fine-tuning on oxford102 style images:
+
+net: "examples/A-Oxford102/train_val_hash.prototxt"
+test_iter: 124        # enough iterations to cover the 6,149 images with a batch size of 50
+test_interval: 500  
+base_lr: 0.001        # lr for fine-tuning should be lower than when starting from scratch
+lr_policy: "step"
+gamma: 0.1
+stepsize: 5000       # stepsize should also be lower, as we're closer to being done
+display: 200
+max_iter: 30000
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 30000
+snapshot_prefix: "examples/A-Oxford102/oxford102_VGG_S_32_"
+solver_mode: GPU
+

@@ -1,0 +1,4 @@
+1. main code : mnist feature v3.ipynb, extract hash code for different model
+2. use caffe.set_mode_gpu() to use GPU
+3. caffe.Net('net.prototxt', 'net.caffemodel', 1) has 3 parameters
+4. use train.prototxt to generate deploy.prototxt
